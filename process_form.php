@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // エラーがない場合、メール送信
     if (empty($errors)) {
         // 管理者宛てのメール設定
-        $to = "info@nexus-tennis.com"; // 管理者のメールアドレス
+        $to = "wassoi1357@gmail.com"; // 管理者のメールアドレス
         $admin_subject = "【無料体験申込】" . $name . " 様";
         
         // メールヘッダー
