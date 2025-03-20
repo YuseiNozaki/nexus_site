@@ -35,10 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = 'お問い合わせ種別を選択してください。';
     }
     
-    if (empty($subject)) {
-        $errors[] = '件名を入力してください。';
-    }
-    
     if (empty($message)) {
         $errors[] = 'お問い合わせ内容を入力してください。';
     }
@@ -50,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // エラーがない場合、メール送信
     if (empty($errors)) {
         // 管理者宛てのメール設定
-        $to = "info@nexus-tennis.com"; // 管理者のメールアドレス
+        $to = "wassoi1357@gmail.com"; // 管理者のメールアドレス
         $admin_subject = "【お問い合わせ】" . $subject;
         
         // メールヘッダー
@@ -70,7 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>メールアドレス:</strong> {$email}</p>
             <p><strong>電話番号:</strong> " . ($phone ? $phone : '記入なし') . "</p>
             <p><strong>お問い合わせ種別:</strong> {$type}</p>
-            <p><strong>件名:</strong> {$subject}</p>
             <p><strong>内容:</strong></p>
             <p>" . nl2br($message) . "</p>
         </body>
@@ -81,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $auto_subject = "【自動返信】お問い合わせありがとうございます - Nexusソフトテニススクール";
         $auto_headers = "MIME-Version: 1.0" . "\r\n";
         $auto_headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $auto_headers .= "From: Nexusソフトテニススクール <info@nexus-tennis.com>" . "\r\n";
+        $auto_headers .= "From: Nexusソフトテニススクール <wassoi1357@gmail.com>" . "\r\n";
         
         // お客様宛て自動返信メール本文
         $auto_message = "
@@ -95,20 +90,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>以下の内容でお問い合わせを受け付けました。</p>
             <hr>
             <p><strong>お問い合わせ種別:</strong> {$type}</p>
-            <p><strong>件名:</strong> {$subject}</p>
             <p><strong>内容:</strong></p>
             <p>" . nl2br($message) . "</p>
             <hr>
             <p>担当者より改めてご連絡いたします。</p>
-            <p>なお、2営業日経っても返信がない場合は、お手数ですが045-XXX-XXXXまでご連絡ください。</p>
+            <p>なお、2営業日経っても返信がない場合は、お手数ですが080-5292-1635までご連絡ください。</p>
             <p>どうぞよろしくお願いいたします。</p>
             <p>Nexusソフトテニススクール</p>
             <p>
                 〒244-0801<br>
                 神奈川県横浜市戸塚区品濃町1588-1<br>
                 KPIPARKテニスコート<br>
-                TEL: 045-XXX-XXXX<br>
-                Email: info@nexus-tennis.com
+                TEL: 080-5292-1635<br>
+                Email: wassoi1357@gmail.com
             </p>
         </body>
         </html>

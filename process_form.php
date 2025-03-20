@@ -76,10 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $experience_display = '初心者（未経験）';
             break;
         case 'intermediate':
-            $experience_display = '中級者（1～3年）';
+            $experience_display = '1～3年';
             break;
         case 'advanced':
-            $experience_display = '上級者（3年以上）';
+            $experience_display = '3年以上';
             break;
         default:
             $experience_display = $experience;
@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $auto_subject = "【Nexusソフトテニススクール】無料体験レッスン申込確認";
         $auto_headers = "MIME-Version: 1.0" . "\r\n";
         $auto_headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $auto_headers .= "From: Nexusソフトテニススクール <info@nexus-tennis.com>" . "\r\n";
+        $auto_headers .= "From: Nexusソフトテニススクール <wassoi1357@gmail.com>" . "\r\n";
         
         // お客様宛て自動返信メール本文
         $auto_message = "
@@ -139,15 +139,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>希望日:</strong> {$preferred_date}</p>
             <hr>
             <p>担当者より改めて日程調整のご連絡をさせていただきます。</p>
-            <p>なお、2営業日経っても連絡がない場合は、お手数ですが045-XXX-XXXXまでご連絡ください。</p>
+            <p>なお、2営業日経っても連絡がない場合は、お手数ですが080-5292-1635までご連絡ください。</p>
             <p>どうぞよろしくお願いいたします。</p>
             <p>Nexusソフトテニススクール</p>
             <p>
                 〒244-0801<br>
                 神奈川県横浜市戸塚区品濃町1588-1<br>
                 KPIPARKテニスコート<br>
-                TEL: 045-XXX-XXXX<br>
-                Email: info@nexus-tennis.com
+                TEL: 080-5292-1635<br>
+                Email: wassoi1357@gmail.com
             </p>
         </body>
         </html>
