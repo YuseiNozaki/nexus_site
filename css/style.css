@@ -37,6 +37,13 @@ body {
     color: var(--primary);
 }
 
+.toppage-heder{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
 /* Page Header */
 .page-header {
     padding: 120px 0 60px;
